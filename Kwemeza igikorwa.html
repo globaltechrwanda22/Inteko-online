@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <title>Kwemeza Kwitabira Igikorwa</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #e9f5e9;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 15px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    h2 {
+      text-align: center;
+    }
+    #thanks {
+      display: none;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+<button onclick="goBack()" class="back-btn" title="Subira Inyuma">⬅</button>
+
+<style>
+  .back-btn {
+    width: 50px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 99;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .back-btn:hover {
+    background-color: #163074;
+  }
+</style>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+  <div class="container">
+    <h2>Kwemeza Kwitabira Igikorwa</h2>
+    <form id="responseForm">
+      <label>Amazina yawe:</label>
+      <input type="text" name="name" required>
+
+      <label>Ese uzaboneka ku gikorwa?</label>
+      <select name="attendance" id="attendance" required>
+        <option value="">-- Hitamo --</option>
+        <option value="Nzaboneka">Nzaboneka</option>
+        <option value="Sindi buboneke">Sindi buboneke</option>
+      </select>
+
+      <div id="reasonDiv" style="display: none;">
+        <label>Impamvu:</label>
+        <textarea name="reason" rows="3"></textarea>
+      </div>
+
+      <button type="submit">Ohereza Igisubizo</button>
+    </form>
+
+    <div id="thanks">Urakoze ku kwemeza!</div>
+  </div>
+
+  <script>
+    const attendanceSelect = document.getElementById("attendance");
+    const reasonDiv = document.getElementById("reasonDiv");
+
+    attendanceSelect.addEventListener("change", () => {
+      if (attendanceSelect.value === "Sindi buboneke") {
+        reasonDiv.style.display = "block";
+      } else {
+        reasonDiv.style.display = "none";
+      }
+    });
+
+    document.getElementById("responseForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Ntitwohereze page isanzwe
+      document.getElementById("thanks").style.display = "block";
+      this.reset();
+      reasonDiv.style.display = "none";
+    });
+  </script>
+</body>
+</html>

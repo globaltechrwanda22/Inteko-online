@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <title>Kwizigama mu Kinina</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f4f8;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: green;
+      text-align: center;
+    }
+
+    .info {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .info p {
+      font-size: 18px;
+    }
+
+    .calendar {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 16px;
+      background-color: #e8f5e9;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Kwizigama mu Kinina</h2>
+
+    <div class="info">
+      <p><strong>Amafaranga amaze kwizigama:</strong> <span id="amount">10,000 Frw</span></p>
+      <p><strong>Hasigaye iminsi:</strong> <span id="daysLeft"></span> kugira ngo wongere kwizigama</p>
+    </div>
+
+    <div class="calendar">
+      <strong>Itariki y'igikorwa gikurikira:</strong>
+      <p id="nextDate"></p>
+    </div>
+
+    <button onclick="alert('Kwizigama byemejwe!')">Kongera Kwizigama</button>
+  </div>
+
+  <script>
+    function getNextSavingDay() {
+      const today = new Date();
+      const day = today.getDay(); // 0=Sunday ... 6=Saturday
+      const daysUntilNext = (7 - day + 1) % 7 || 7; // Assuming saving day is Monday (1)
+      const nextDate = new Date(today);
+      nextDate.setDate(today.getDate() + daysUntilNext);
+
+      // Update countdown
+      document.getElementById("daysLeft").textContent = daysUntilNext + " munsi";
+
+      // Format next date
+      document.getElementById("nextDate").textContent = nextDate.toDateString();
+    }
+
+    getNextSavingDay();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteko Online</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- CSS Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: green;
+            color: white;
+            padding: 20px 0;
+        }
+
+         .container {
+            width: 90%;
+            height: 70px;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container a {
+            display: inline-flex;
+            padding: 20px;
+            color: white;
+            list-style: none;
+            text-decoration: none;
+        }
+        .container a[href=""]{
+             font-size: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav label, select {
+            color: black;
+            font-size: 12px;
+        }
+        h2 a{
+            color: black;
+            font-size: 12px;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content {
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+        /* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Style for the user profile section */
+.user-profile {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-link {
+  color: black;
+  font-size: 20px;
+}
+
+.profile-name {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 3px 6px;
+  border-radius: 5px;
+  top: 30px;
+  left: -20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Show the profile name when hovering over the profile link */
+.user-profile:hover .profile-name {
+  display: block;
+}
+/* Logout button styles */
+.logout-button {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #f44336; /* Red background for logout */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+   <header>
+        <div class="container">
+            <h1>Inteko Online</h1>
+            <nav>
+    <ul>
+        <li style="display: inline;">
+            <a href="index.html"><i class="bi bi-house"></i> Ahabanza</a>
+            <a href="Umuturage.html"> <i class="bi bi-person"></i> Umwirondoro</a>
+
+            <!-- Dropdown Ubuzima -->
+            <div class="dropdown">
+                <a href="#"><i class="bi bi-heart-pulse"></i> Ubuzima</a>
+                <div class="dropdown-content">
+                    <a href="#">Serivisi z’ubuvuzi</a>
+                    <a href="#">Mituweli</a>
+                    <a href="#">Gutanga amaraso</a>
+                    <a href="#">Isuku n’isukura</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#"><i class="bi bi-shield-lock"></i> Umutekano</a>
+                <div class="dropdown-content">
+                    <a href="#">Ubwirinzi bw’amakuru</a>
+                    <a href="#">Serivisi z’umutekano</a>
+                    <a href="#">Amategeko n’amabwiriza</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"><i class="bi bi-bank"></i> Ubukungu</a>
+                <div class="dropdown-content">
+                    <a href="#">Ibikorwa by’ubucuruzi</a>
+                    <a href="#">Kwiga ku imari</a>
+                    <a href="#">Serivisi z’imari</a>
+                    <a href="ikimina.html">Konti y' Ibimina </a>
+                </div>
+            </div>
+            <div class="user-profile">
+                <a href="#" class="profile-link"><i class="bi bi-person-circle"></i></a>
+                <div class="profile-name">Norbert Zimurinda</div> 
+                <a href="Umuturage.html" class="logout-button"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+        </div>
+    </header>
+    <section class="content">
+        <div class="section">
+            <h3>Inama ku Mibanire mu Muryango</h3>
+            <p>Tanga umusingi w’urukundo, ubwubahane no kuganira hagati y’abashakanye n’ababyeyi n’abana.</p>
+            <img src="family_talk.png" alt="Ifoto y'umuryango uri mu biganiro">
+        </div>
+
+        <div class="section">
+            <h3>Kurwanya Ihohoterwa</h3>
+            <p>Turwanya ihohoterwa iryo ari ryo ryose kandi dutanga ubujyanama ku babayeho nabi.</p>
+            <img src="anti_violence.jpg" alt="Ifoto yerekena kurwanya ihohoterwa">
+        </div>
+
+        <div class="section">
+            <h3>Kwitaho Abafite Ubumuga</h3>
+            <p>Turaharanira ko abafite ubumuga babona serivisi zose kandi bagafatwa kimwe nk'abandi.</p>
+            <img src="b.jpeg" alt="Ifoto y’ufite ubumuga afashwa">
+        </div>
+
+        <div class="section">
+            <h3>Amatsinda n’Imiryango Ifasha</h3>
+            <p>Andika mu matsinda y’iterambere nk’ibimina, savings groups n’andi mashyirahamwe.</p>
+            <img src="ab.jpg" alt="Ifoto y'itsinda ry'abaturage">
+        </div>
+    </section>
+    <center>
+         <footer>
+        <div class="container">
+            <p>&copy; 2025 Inteko Online. Contacts: +250 792521001</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+
+</body>
+</html>

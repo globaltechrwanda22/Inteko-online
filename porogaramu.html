@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <title>Ibikorwa Biriho</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .activity {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .activity h3 {
+      margin: 0;
+      color: #2c3e50;
+    }
+    .activity p {
+      margin: 10px 0;
+    }
+    .activity button {
+      background: green;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .activity button:hover {
+      background: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+<button onclick="goBack()" class="back-btn" title="Subira Inyuma">⬅</button>
+
+<style>
+  .back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 99;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .back-btn:hover {
+    background-color: #163074;
+  }
+</style>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+  <div class="container">
+    <h2>Ibikorwa Umunyagihugu Ashobora Kwiyandikamo</h2>
+
+    <div class="activity">
+      <h3>Amahugurwa ku bucuruzi</h3>
+      <p>Ni amahugurwa agamije gufasha urubyiruko gutangiza imishinga mito.</p>
+      <a href="Kwemeza igikorwa.html"><button onclick="applyNow('Amahugurwa ku bucuruzi')">Apply</button></a>
+    </div>
+
+    <div class="activity">
+      <h3>Igikorwa cyo gusukura Umujyi</h3>
+      <p>Hazaba igikorwa cyo gukora isuku mu bice bitandukanye by'umujyi ku wa Gatandatu utaha.</p>
+      <a href="Kwemeza igikorwa.html"><button onclick="applyNow('Igikorwa cyo gusukura Umujyi')">Apply</button></a>
+    </div>
+
+    <div class="activity">
+      <h3>Irushanwa ry'indirimbo zubaka</h3>
+      <p>Abahanzi bashishikarizwa gutanga ibihangano bifite ubutumwa bubaka.</p>
+      <a href="Kwemeza igikorwa.html"><button onclick="applyNow('Irushanwa ry\'indirimbo zubaka')">Apply</button></a>
+    </div>
+  </div>
+
+  <script>
+    function applyNow(activityName) {
+      // Ohereza umuntu ku ifishi ya application, ushyizemo izina ry'igikorwa
+      window.location.href = "form.html?activity=" + encodeURIComponent(activityName);
+    }
+  </script>
+</body>
+</html>

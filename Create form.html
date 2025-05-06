@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imibereho Myiza n’Imiryango</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- CSS Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: green;
+            color: white;
+            padding: 20px 0;
+        }
+
+          .container {
+            width: 90%;
+            height: 70px;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container a {
+            display: inline-flex;
+            padding: 30px;
+            color: white;
+            list-style: none;
+            text-decoration: none;
+        }
+        .container a[href=""]{
+             font-size: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav label, select {
+            color: black;
+            font-size: 12px;
+        }
+        h2 a{
+            color: black;
+            font-size: 12px;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content {
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+        .registerForm{
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form input[type="text"], .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #3b5fc4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+<button onclick="goBack()" class="back-btn" title="Subira Inyuma">⬅</button>
+
+<style>
+  .back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 99;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .back-btn:hover {
+    background-color: #163074;
+  }
+</style>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+   <header>
+        <div class="container">
+            <h1>Inteko Online</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="bi bi-house"></i>Home</a>
+                        <a href="Umuturage.html"> <i class="bi bi-person-fill"></i>Umuturage</a>
+                        <a href=""> <i class="bi bi-person-badge-fill"></i>Inzego Z'ibanze</a>
+                        <a href=""> <i class="bi bi-journal-check"></i>Porogaramu</a>
+                        <a href=""><i class="bi bi-megaphone-fill"></i>Andi makuru</a>
+                        <label for="district-select">Hitamo Akarere:</label>
+                        <select id="district-select">
+                            <option>Muhanga</option>
+                            <option>Kamonyi</option>
+                            <option>Ruhango</option>
+                            <option>Huye</option>
+                            <option>Nyanza</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Create Account Form -->
+<section id="login-form" style="padding: 40px; background-color: #ffffff;">
+    <div style="max-width: 500px; margin: auto;">
+        <h2 style="text-align: center; color: #1e3a8a;">Fungura Konti</h2>
+        <form id="registerForm">
+            <div style="margin-bottom: 15px;">
+                <label>Izina ukoresha:</label>
+                <input type="text" id="reg-username" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label>Email:</label>
+                <input type="email" id="reg-email" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label>Ijambo ry’ibanga:</label>
+                <input type="password" id="reg-password" required style="width: 100%; padding: 8px;">
+            </div>
+            <button type="submit" style="background-color: #1e3a8a; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+                Fungura Konti
+            </button>
+            <button type="button" onclick="goToLogin()" style="margin-left: 10px; padding: 10px 20px; text-decoration: none; font-weight: bold;"><a href="Umuturage.html">
+                Ufite Konti? Injira</a>
+            </button>
+        </form>
+    </div>
+</section>
+
+
+      
+
+    <section class="content">
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Inteko Online. Contacts: +250 792521001</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Guhitamo Akarere
+        document.getElementById("district-select").addEventListener("change", function() {
+            const district = this.value;
+            alert("Wahisemo Akarere ka: " + district);
+        });
+
+      // Fungura Konti - fake handler
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const username = document.getElementById("reg-username").value;
+    const email = document.getElementById("reg-email").value;
+
+    alert("Murakoze " + username + "! Konti yawe yashinzwe neza.");
+    // Ohereza user kuri login
+    goToLogin();
+});
+
+// Kwimuka kuri login form
+function goToLogin() {
+    document.getElementById("create-account").style.display = "none";
+    document.getElementById("login-form").style.display = "block";
+}
+
+    </script>
+</body>
+</html>
